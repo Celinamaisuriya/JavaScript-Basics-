@@ -1,0 +1,67 @@
+<!-- Array and function they both are object -->
+<script>
+    let a = 1;
+    let b = "celina";
+    let c = true;
+    let d;
+    let e = "";
+
+    console.log(typeof(a)); // number
+    console.log(typeof(b)); // string
+    console.log(typeof(c)); // boolean
+    console.log(typeof(d)); // undefined
+    console.log(typeof(e)); // string
+   
+</script>
+
+<!-- 
+Q - What is primitive and non-primitive in JS?
+==> Primitive data types are number, string, boolean, NULL, Infinity and symbol. 
+==> Non-primitive data types is the object. 
+-->
+
+<script>
+    const youtube = {
+        name : "Celina",
+        subs : "100"
+    }
+
+    youtube.prof = "Webdevloper";
+
+    console.log(youtube);
+    /*
+        Output :
+            name : "Celina" 
+            prof : "Webdevloper"
+            subs : "100"
+    */
+
+    console.log(youtube.prof);
+    /* 
+        Output : Webdevloper
+    */
+
+    console.log(typeof({}));
+    /* 
+        Output : Object
+    */
+
+    console.log(typeof([]));
+    /* 
+        Output : Object
+    */
+
+    console.log(typeof(function(){}));
+    /* 
+        Output : function
+    */
+   const check = () =>{
+    console.log("Checking");
+   }
+
+   check.letshavefun = "allright I an Object too";
+   console.log(check.letshavefun);
+   /* 
+        Output : allright I am Object too
+    */
+</script>

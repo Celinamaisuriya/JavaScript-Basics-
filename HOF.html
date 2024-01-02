@@ -1,0 +1,37 @@
+<!-- A higher order function is a function that takes one or more functions as arguments, or returns a function as its result. 
+    There are several different types of higher order functions like map and reduce. 
+-->
+<script>
+    const interviewQuestion = (name) =>{
+        if(name === "Celina"){
+            return function(topic) { // anonymous function 
+                console.log(`Hii ${name}.What is ${topic}?. please explain us.`);
+            }
+        }
+        if(name === "Jeremi"){
+            return function(topic) { // anonymous function 
+                console.log(`Hii ${name}.What is ${topic}?. please explain us.`);
+            }
+        }
+        if(name === "Sanjay"){
+            return function(topic) { // anonymous function 
+                console.log(`Hii ${name}.What is ${topic}?. please explain us.`);
+            }
+        }
+        else{
+            return function (){
+                console.log("Welcome");
+            }
+        }
+    }
+
+    interviewQuestion ("Celina")("UI");
+    interviewQuestion ("Jeremi")("Vue");
+    interviewQuestion ("Sanjay")("React");
+
+    const can1 = interviewQuestion ("Celina");
+    can1("UI");
+    can1("Vue");
+    can1("Angular");
+</script>
+
