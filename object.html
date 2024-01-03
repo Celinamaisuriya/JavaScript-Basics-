@@ -153,3 +153,49 @@
     };
     console.log(person);
 </script>
+
+<script>
+// Home Made Iterable
+function myNumbers() {
+  let n = 0;
+  return {
+    next: function() {
+      n += 10;
+      return {value:n, done:false};
+    }
+  };
+}
+
+// Create Iterable
+const n = myNumbers();
+n.next(); // 10
+n.next(); // 20
+n.next(); // 30
+
+console.log(myNumbers);
+</script>
+
+<script>
+    // Create an Object
+    myNumbers1 = {};
+    
+    // Make it Iterable
+    myNumbers1[Symbol.iterator] = function() {
+      let n = 0;
+      done = false;
+      return {
+        next() {
+          n += 10;
+          if (n == 100) {done = true}
+          return {value:n, done:done};
+        }
+      };
+    }
+    
+    let text = ""
+    for (const num of myNumbers1) {
+      text += num +"<br>"
+    }
+    
+    console.log(text);
+    </script>
