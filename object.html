@@ -6,24 +6,24 @@
     let d;
     let e = "";
 
-    console.log(typeof(a)); // number
-    console.log(typeof(b)); // string
-    console.log(typeof(c)); // boolean
-    console.log(typeof(d)); // undefined
-    console.log(typeof(e)); // string
-   
+    console.log(typeof (a)); // number
+    console.log(typeof (b)); // string
+    console.log(typeof (c)); // boolean
+    console.log(typeof (d)); // undefined
+    console.log(typeof (e)); // string
+
 </script>
 
 <!-- 
-Q - What is primitive and non-primitive in JS?
-==> Primitive data types are number, string, boolean, NULL, Infinity and symbol. 
-==> Non-primitive data types is the object. 
+ Q - What is primitive and non-primitive in JS?
+ ==> Primitive data types are number, string, boolean, NULL, Infinity and symbol. 
+ ==> Non-primitive data types is the object. 
 -->
 
 <script>
     const youtube = {
-        name : "Celina",
-        subs : "100"
+        name: "Celina",
+        subs: "100"
     }
 
     youtube.prof = "Webdevloper";
@@ -41,27 +41,115 @@ Q - What is primitive and non-primitive in JS?
         Output : Webdevloper
     */
 
-    console.log(typeof({}));
+    console.log(typeof ({}));
     /* 
         Output : Object
     */
 
-    console.log(typeof([]));
+    console.log(typeof ([]));
     /* 
         Output : Object
     */
 
-    console.log(typeof(function(){}));
+    console.log(typeof (function () { }));
     /* 
         Output : function
     */
-   const check = () =>{
-    console.log("Checking");
-   }
+    const check = () => {
+        console.log("Checking");
+    }
 
-   check.letshavefun = "allright I an Object too";
-   console.log(check.letshavefun);
-   /* 
-        Output : allright I am Object too
+    check.letshavefun = "allright I an Object too";
+    console.log(check.letshavefun);
+    /*
+         Output : allright I am Object too
+     */
+</script>
+
+<script>
+    let lecture = 10;
+    let section = 3;
+    let title = 'javascript';
+
+    const course = {
+        lecture: 10,
+        section: 3,
+        title: 'javascript',
+        notes: {
+            introduction: "Welcome to javascript"
+        },
+        enroll() {
+            console.log('You are sucessfully enrolled');
+        }
+    }
+    course.enroll()
+
+    /*
+         Output : You are sucessfully enrolled
+     */
+
+    console.log(course)
+    /* 
+        Output :
+            enroll :  enroll()
+            lecture : 10
+            notes : {introduction: 'Welcome to javascript'}
+            section : 3
+            title : "javascript"
     */
+
+    course.price = 999;
+    /* 
+        Output :
+            enroll :  enroll()
+            lecture : 10
+            notes : {introduction: 'Welcome to javascript'}
+            price : 999
+            section : 3
+            title : "javascript"
+    */
+</script>
+
+<!-- factory function -->
+
+<script>
+    function createcource(){
+        const courses = {
+            lecture: 10,
+            section: 3,
+            title: 'javascript',
+            notes: {
+                introduction: "Welcome to javascript"
+            },
+            enroll() {
+                console.log('You are sucessfully enrolled');
+            }
+        }
+        return courses;
+    }
+    const courses = createcource('javascript');
+    courses.enroll()
+
+    //constructor function
+
+    function Course(){
+        this.title = title,
+        this.enroll = function(){
+            console.log('you are sucessfully enrolled');
+        }
+    }
+    const Course = new course1('javascript');
+    Course.enroll()
+</script>
+
+<script>
+    const person = {
+      firstName: "John",
+      lastName: "Doe",
+      id: 5566,
+      fullName: function() {
+        return this.firstName + " " + this.lastName;
+      }
+    };
+    console.log(person);
 </script>
