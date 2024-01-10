@@ -1,4 +1,4 @@
-// 1 Callbacks : 
+// 1 Callbacks :-
 // ==> "I will call back later!"
 // ==> A callback is a function passed as an argument to another function.
 // ==> This technique allows a function to call another function.
@@ -23,7 +23,7 @@ mySecond();
 
 // Output : Goodbye 
 
-//  JavaScript functions are executed in the sequence they are called. -->
+//  JavaScript functions are executed in the sequence they are called. 
 
 function myDisplayer1(some) {
     console.log(some);
@@ -42,7 +42,7 @@ myFirst1();
 
 // Output : Hello 
 
-// Sequence Control :
+// Sequence Control :-
 // Sometimes you would like to have better control over when to execute a function.
 
 
@@ -86,7 +86,7 @@ C(5, 5, myDisplayer);
 
 // Output :  10
 
-// Callback Functions
+// Callback Functions :-
 
 // Create an Array
 const myNumbers = [4, 1, -20, -7, 5, 9, -6];
@@ -110,7 +110,7 @@ function removeNeg(numbers, callback) {
 
 // Output :  [ 4, 1, 5, 9 ]
 
-// 2. Asynchronous :
+// 2. Asynchronous :-
 // ==> Functions running in parallel with other functions are called asynchronous.
 
 function myDisplayer(something) {
@@ -139,7 +139,7 @@ C2(5, 5);
 
 // Output : 10
 
-// setTimeout() with a Callback :
+// setTimeout() with a Callback :-
 
 setTimeout(myFunction, 3000);
 
@@ -151,7 +151,7 @@ function myFunction() {
 
 // Output : Celina !!
 
-// setInterval() with a Callback :
+// setInterval() with a Callback :-
 
 setTimeout(function() { 
     myFunction("Celina !!!"); 
@@ -173,11 +173,11 @@ function myFunction(value) {
 // Output : 16:14:54 
 // Using setInterval() to display the time every second (1000 milliseconds).
 
-// 3. Promises :
+// 3. Promises :-
 // ==> "Producing code" is code that can take some time "Consuming code" is code that must wait for the result.
 // ==> A Promise is an Object that links Producing code and Consuming code. 
 
-// The then() Metod :
+// The then() Metod :-
 
 function myDisplayer(some) {
     console.log(some);
